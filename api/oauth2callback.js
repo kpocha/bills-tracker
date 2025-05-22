@@ -13,9 +13,9 @@ export default async function handler(req, res) {
       },
       body: new URLSearchParams({
         code,
-        client_id: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID,
-        client_secret: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_SECRET,
-        redirect_uri: process.env.REACT_APP_REDIRECT_URI,
+        client_id: process.env.GOOGLE_OAUTH_CLIENT_ID,
+        client_secret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+        redirect_uri: process.env.REDIRECT_URI,
         grant_type: "authorization_code",
       }),
     });

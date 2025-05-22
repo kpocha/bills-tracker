@@ -67,8 +67,8 @@ export const createNewDoc = async ({
 }) => {
   try {
     const oAuth2Client = new OAuth2Client({
-      clientId: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID,
-      clientSecret: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
     });
 
     oAuth2Client.credentials.access_token = access_token;
@@ -96,8 +96,8 @@ export const checkCredentials = async ({
 }) => {
   try {
     const oAuth2Client = new OAuth2Client({
-      clientId: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID,
-      clientSecret: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
     });
 
     oAuth2Client.credentials.access_token = access_token;
@@ -123,8 +123,8 @@ export const createDoc = async (
 ) => {
   try {
     const oauthClient = new OAuth2Client({
-      clientId: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID,
-      clientSecret: process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
     });
 
     oauthClient.credentials.access_token = access_token;

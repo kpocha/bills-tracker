@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_BASE_URI;
+const baseURL = process.env.BASE_URI;
 
 export const getRefreshToken = async (code) => {
   try {
