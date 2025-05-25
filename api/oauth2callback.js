@@ -1,6 +1,5 @@
 export default async function handler(req, res) {
- // const { code } = req.query;
-const { code } = req.body;
+  const { code } = req.query;
 
   if (!code) {
     return res.status(400).json({ error: "No code provided!" });
