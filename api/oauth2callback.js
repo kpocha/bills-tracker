@@ -21,6 +21,8 @@ export default async function handler(req, res) {
     });
 
     const tokens = await response.json();
+    
+    console.log("Tokens response:", tokens); // 
 
     if (tokens.error) {
       return res.status(400).json(tokens);
