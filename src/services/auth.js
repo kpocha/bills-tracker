@@ -8,6 +8,8 @@ export const getRefreshToken = async (code) => {
     return data;
   } catch (error) {
     console.log("ERROR:: ", error);
+    console.log(process.env.REDIRECT_URI)
+
     return null;
   }
 };

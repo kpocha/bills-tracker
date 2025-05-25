@@ -1,6 +1,10 @@
 export default async function handler(req, res) {
   const { code } = req.query;
-
+    console.log("Env:", {
+    client_id: process.env.GOOGLE_OAUTH_CLIENT_ID,
+    client_secret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+    redirect_uri: process.env.REDIRECT_URI,
+    });
   if (!code) {
     return res.status(400).json({ error: "No code provided!" });
   }
@@ -21,8 +25,9 @@ export default async function handler(req, res) {
     });
 
     const tokens = await response.json();
-    
+
     console.log("Tokens response:", tokens); // 
+    console.log(process.env.REDIRECT_URI)
 
     if (tokens.error) {
       return res.status(400).json(tokens);
