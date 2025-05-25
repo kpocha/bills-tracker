@@ -4,7 +4,7 @@ const baseURL = process.env.REACT_APP_BASE_URI;
 
 export const getRefreshToken = async (code) => {
   try {
-    const { data } = await axios.get(`${baseURL}/api/oauth2callback?code=${code}`);
+    const { data } = await axios.post(`${baseURL}/api/oauth2callback`,{code});
     return data;
   } catch (error) {
     console.log("ERROR:: ", error);
